@@ -16,7 +16,7 @@ print("テストデータ数:",len(test))
 fashion_class = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
 
 #バッチサイズ
-Batch_size = 256
+Batch_size = 128
 
 #DataLoader
 train_loader = DataLoader(train,batch_size=Batch_size,shuffle=True)
