@@ -38,4 +38,4 @@ def w2id(word2id, length):
     return result
 
 id_list = w2id(word2id, 30)
-print(id_list)
+print("id_list:",id_list)
