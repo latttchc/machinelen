@@ -39,3 +39,16 @@ def w2id(word2id, length):
 
 id_list = w2id(word2id, 30)
 print("id_list:",id_list)
+
+def id2w(id2word, id_list):
+    result = []
+    for line in id_list:
+        tmp = []
+        for i in line:
+            if i != 0:
+                tmp.append(id2word[i])
+        result.append(tmp)
+    return result
+
+dst = id2w(id2word, id_list)
+print(dst)
