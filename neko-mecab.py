@@ -1,7 +1,7 @@
 import MeCab as mc
 
 t = mc.Tagger("-Owakati")
-
+# 単語ごとに分割された分かち書きの形に変換され、wakati.txt として結果が保存
 f = open("data/neko.txt","r", encoding="utf-8")
 text = f.readlines() #1行ずつ読み取り
 num = len(text) #行数の取得

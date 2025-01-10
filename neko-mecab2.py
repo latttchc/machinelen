@@ -14,8 +14,9 @@ text = f.readlines()
 num = len(text)
 id = 0 
 for i in range(num):
+    #単語毎にリスト内に分割
     for word in text[i].split(" "): #split:List内の要素を分割
-        if word == "\n":
+        if word == "\n": #　\nは無視
             continue
         else:
             if word not in word2id:
