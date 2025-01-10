@@ -74,4 +74,4 @@ class MyDataset(Dataset):
         return torch.tensor(self.x[idx]), torch.tensor(self.y[idx])
     
 dataset = MyDataset(id_list)
-print(dataset[0])
+print("dataset[0]:",dataset[0])
