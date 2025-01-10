@@ -1,3 +1,10 @@
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader
+import matplotlib.pyplot as plt
+import numpy as np
+
 f = open("wakati.txt", "r")
 
 word2id = {}
@@ -52,3 +59,19 @@ def id2w(id2word, id_list):
 
 dst = id2w(id2word, id_list)
 print(dst)
+
+class MyDataset(Dataset):
+    def __init__(self, id_list):
+        super().__init__
+        self.x = [data[0:-1] for data in id_list]
+        self.y = [data[1:] for data in id_list]
+        self.data_length = len(id_list)
+    
+    def __len__(self):
+        return self.data_length
+    
+    def __getitem__(self,idx):
+        return torch.tensor(self.x[idx]), torch.tensor(self.y[idx])
+    
+dataset = MyDataset(id_list)
+print(dataset[0])
